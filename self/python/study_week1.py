@@ -255,19 +255,144 @@ import numpy as np
 # print(valid_score)
 
 
-temp = {}
+# temp = {}
 
-ice = {"메로나": 1000, "폴라포": 1200, "빵빠레": 1800}
-print(ice)
+# ice = {"메로나": 1000, "폴라포": 1200, "빵빠레": 1800}
+# print(ice)
 
 
-ice = {"메로나": 1000, "폴라포": 1200, "빵빠레": 1800}
-ice["죠스바"] = 1200
-ice["월드콘"] = 1500
-print(ice)
+# ice = {"메로나": 1000, "폴라포": 1200, "빵빠레": 1800}
+# ice["죠스바"] = 1200
+# ice["월드콘"] = 1500
+# print(ice)
 
-print("메로나 가격: ", ice["메로나"])
+# print("메로나 가격: ", ice["메로나"])
 
-ice["메로나"] = 1300
+# ice["메로나"] = 1300
 
-del ice["메로나"]
+# del ice["메로나"]
+
+# inventory = {"메로나": [300, 20],
+#              "비비빅": [400, 3],
+#              "죠스바": [250, 100]}
+
+# print(inventory["메로나"][0], "원")
+
+# print(inventory["메로나"][1], "개")
+
+# inventory = {"메로나": [300, 20],
+#              "비비빅": [400, 3],
+#              "죠스바": [250, 100]}
+# inventory["월드콘"] = [500, 7]
+# 딕셔너리는 위와 같이 값 추가가 가능하다.
+
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# ice = list(icecream.keys())
+# print(ice)
+# 변수명.key()를 통해서 키값만 가져오는 것이 가능
+# ice = list(icecream.values())
+# 역 또한 같다.
+
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# print(sum(icecream.values()))
+# value값 sum
+
+# icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+# new_product = {'팥빙수':2700, '아맛나':1000}
+# icecream.update(new_product)
+# print(icecream)
+# 변수명.update(추가할 딕셔너리명) 으로 값 추가 가능
+
+# keys = ("apple", "pear", "peach")
+# vals = (300, 250, 400)
+# result = dict(zip(keys, vals))
+# print(result)
+# zip으로 keys와 vals를 묶고, dict로 변환
+# Q) 인덱스의 수가 맞지 않는다면?
+
+# time = input("현재시간: ")
+# if time[-2:] == "00":
+#     print("정각 입니다.")
+# else:
+#     print("정각이 아닙니다.")
+# 신박한 인덱싱 방법
+
+# fruit = ["사과", "포도", "홍시"]
+# user = input("좋아하는 과일은?")
+# if user in fruit:
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
+# if문 헷갈릴 때 볼 수 있는 if 예제
+
+# fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
+# user = input("좋아하는 과일은?")
+# if user in fruit.values():
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
+# if와 딕셔너리를 이용한 문제
+
+
+# 환율 = {"달러": 1167,
+#         "엔": 1.096,
+#         "유로": 1268,
+#         "위안": 171}
+# user = input("입력: ")
+# num, currency = user.split()
+# print(float(num) * 환율[currency], "원")
+# 효율적인 계산 반복문
+
+# number = input("휴대전화 번호 입력: ")
+# num = number.split("-")[0]
+# if num == "011":
+#     com = "SKT"
+# elif num == "016":
+#     com = "KT"
+# elif num == "019":
+#     com = "LGU"
+# else:
+#     com = "알수없음"
+# print(f"당신은 {com} 사용자입니다.")
+# split과 if문
+
+# 주민번호 = input("주민등록번호: ")
+# 주민번호 = 주민번호.split("-")[1]
+# if 주민번호[0] == "1" or 주민번호[0] == "3":
+#     print("남자")
+# else:
+#     print("여자")
+
+# num = input("주민등록번호: ")
+# 계산1 = int(num[0]) * 2 + int(num[1]) * 3 + int(num[2]) * 4 + int(num[3]) * 5 + int(num[4]) * 6 + \
+#         int(num[5]) * 7 + int(num[7]) * 8 + int(num[8]) * 9 + int(num[9]) * 2 + int(num[10])* 3 + \
+#         int(num[11])* 4 + int(num[12]) * 5
+# 계산2 = 11 - (계산1 % 11)
+# 계산3 = str(계산2)
+
+# if num[-1] == 계산3[-1]:
+#     print("유효한 주민등록번호입니다.")
+# else:
+#     print("유효하지 않은 주민등록번호입니다.")
+
+# import requests
+# btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+
+# 변동폭 = float(btc['max_price']) - float(btc['min_price'])
+# 시가 = float(btc['opening_price'])
+# 최고가 = float(btc['max_price'])
+
+# if (시가+변동폭) > 최고가:
+#     print("상승장")
+# else:
+#     print("하락장")
+
+# 리스트 = ["가", "나", "다", "라"]
+# for 변수 in 리스트[: :2]:
+#   print(변수)
+# 인덱싱
+
+# 리스트 = ["가", "나", "다", "라"]
+# for 변수 in 리스트[: :-1]:
+#   print(변수)
+# 역순 인덱싱
